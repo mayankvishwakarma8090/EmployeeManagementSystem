@@ -1,0 +1,288 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/CSS/all.css" rel="stylesheet" />
+    <link href="~/Content/CSS/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/Content/js/bootstrap.bundle.js"></script>
+    <style>
+        .bg-mycolor {
+            background: #FF6D00;
+        }
+        .text-mycolor {
+            color: #FF6D00 !important;
+        }
+        .header{
+            min-height:50px;
+            padding-top:10px;
+        }
+        .ic {
+            font-size: 20px;
+            height: 30px;
+            width: 30px;
+            text-align: center;
+            line-height: 30px;
+            border: 1px solid #FF6D00;
+            color: #FF6D00;
+            transition: .5s;
+        }
+       
+        #menu ul li a{
+            color:white;
+            font-size:18px;
+        }
+        .sliderimg{
+            height:700px;
+        }
+        .servicesimg{
+            height:150px;
+        }
+        .servicescard:hover{
+            transform:scale(1.1);
+            transition-duration:2s;
+        }
+        .servicescard{
+            transition:2s;
+        }
+        .ufooter{
+            min-height:200px;
+        }
+        .bfooter{
+            height:50px;
+        }
+        .fact{
+            min-height:250px;
+        }
+        .gallery{
+            min-height:300px;
+
+        }
+        .team{
+            min-height:300px;
+        }
+        .factic{
+            height:80px;
+            width:80px;
+            border:1px solid gray;
+            border-radius:50%;
+            font-size:40px;
+            line-height:70px;
+            transition:2s;
+            padding:5px;
+            text-align:center;
+        }
+        .factic:hover{
+            background:#FF1744;
+            color:white;
+            transition:2s;
+        }
+            .imgpic{
+                height:250px;
+            }
+           .webtext{
+               font-size:15px;
+
+           }
+           .txtname{
+               line-height:50px;
+           }
+           .login{
+               margin-top:100px;
+               margin-bottom:100px;
+
+           }
+           .teamimg{
+               height:550px;
+           }
+           .imgservice{
+               height:130px;
+           }
+           .serviceic{
+               font-size:12px;
+               color:#ff0000 !important; 
+           }
+           .directorimg{
+               height:350px;
+           }
+        .imgfeature {
+            height: 100px;
+        }
+        .featureic {
+            font-size: 10px;
+            color: #ff0000 !important;
+        }
+        .footermenu:hover {
+            transform: translateX(10px);
+            color: #f4511e;
+            transition:1s;
+            
+        }
+        .userimg{
+            height:120px;
+            width:120px;
+            border-radius:50%;
+            border:1px solid black;
+        }
+        .ic:hover {
+            transform:rotate(360deg);
+            transition:.5s;
+            background:#FF6D00;
+            color:white;
+        }
+        .fhover {
+            display: inline-flex;
+            text-decoration: none;
+            transition: .5s;
+            color: #bbbbbb;
+            padding-left: 3px;
+        }
+
+            .fhover:hover {
+                color: #EF6C00;
+                transform: translateX(5px);
+                transition: .5s;
+            }
+       
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <!--Start header-->
+        <div class="row header">
+        <div class="col-sm-10 mx-auto">
+            <div class="row py-3">
+                <div class="col-sm-3 fs-2">
+                    HIRE<b class="text-mycolor">NEXT <i class="fa-solid fa-graduation-cap"></i> </b>
+                </div>
+                <div class="col-sm-3">
+                    <b><i class="fa-solid fa-phone ic"></i> Call Us</b> : <br />7884441424 | 7077707077
+                </div>
+                <div class="col-sm-3">
+                    <b><i class="fa-solid fa-envelope ic"></i> Mail Us</b> : <br />ms0969910@gmail.com | mv09699@gmail.com
+                </div>
+                <div class="col-sm-3 pt-3 text-end">
+                    <i class="fa-brands fa-facebook-square ic"></i>
+                    <i class="fa-brands fa-youtube-square ic"></i>
+                    <i class="fa-brands fa-instagram-square ic"></i>
+                    <i class="fa-brands fa-linkedin-in ic"></i>
+                   
+                </div>
+            </div>
+        </div>
+        </div>
+        <!--End header-->
+        <!--Start menu-->
+        <div class="row bg-mycolor shadow-lg">
+            <div class="col-sm-10 mx-auto">
+                <nav class="navbar navbar-expand-lg p-0">
+                    <div class="container-fluid">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <div id="menu" class="mx-auto">
+                                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" aria-current="page" href="/home/index"><i class="fa-solid fa-house"></i>Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/home/about"><i class="fa-solid fa-circle-user"></i>About Us</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/home/Services"><i class="fa-solid fa-circle-user"></i>Services</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/home/contact"><i class="fa-solid fa-phone-volume"></i>Contact Us</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/home/team"><i class="fa-solid fa-people-group"></i>Team </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/home/opening"><i class="fa-solid fa-briefcase"></i>Current Openings</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/home/apply"><i class="fa-solid fa-user-tie"></i>Apply for Job</a>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            Login
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item text-mycolor" href="/home/login">Admin Login</a></li>
+                                            <li><a class="dropdown-item text-mycolor" href="/home/emplogin">Employee Login</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link " href="/home/application">My Application</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!--End menu-->
+    </div>
+    <div style="min-height:500px;">
+        @RenderBody()
+    </div>
+    <!--U Footer Start-->
+    <div class="container-fluid bg-dark">
+        <div class="row ufooter">
+            <div class="col-sm-10 mx-auto">
+                <div class="row">
+                    <div class="col-sm-3 p-3 text-light">
+                        <p class="fs-5 ">Contact Address:</p>
+                        <p class="m-0">Barabanki Lucknow 225001</p><br />
+                        <span><i class="fa-solid fa-phone"></i>+91 1236547899</span><br />
+                        <span><i class="fa-solid fa-phone"></i>+91 1236547899</span><br />
+                        <span><i class="fa-solid fa-envelope"></i> mv0969910@gmail.com</span><br />
+                        <div class="col-sm-4 text-center ">
+                            <i class="fa-brands fa-facebook-square ic"></i>
+                            <i class="fa-brands fa-instagram-square ic"></i>
+                            <i class="fa-brands fa-twitter-square ic"></i>
+                            <i class="fa-brands fa-whatsapp-square ic"></i>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 p-3 text-light">
+                        <p class="footermenu"><i class="fa-solid fa-arrow-right"></i><a href="/home" style="text-decoration:none; color:white;">Home</a></p>
+                        <p class="footermenu"><i class="fa-solid fa-arrow-right"></i><a href="/home/about" style="text-decoration:none; color:white;">About Us</a></p>
+                        <p class="footermenu"><i class="fa-solid fa-arrow-right"></i><a href="/home/services" style="text-decoration:none; color:white;">Services</a></p>
+                        <p class="footermenu"><i class="fa-solid fa-arrow-right"></i><a href="/home/team" style="text-decoration:none; color:white;">Team</a></p>
+                        <p class="footermenu"><i class="fa-solid fa-arrow-right"></i><a href="/home/#gallery" style="text-decoration:none; color:white;">Gallery</a></p>
+                    </div>
+                    <div class="col-sm-3 p-3">
+                        <p class="fs-5 text-light">Resources</p>
+                        <p class="footermenu"><i class="fa-solid fa-phone-volume"></i><a href="/home/contact" class="fhover"> Contact</a></p>
+                        <p class="footermenu"><i class="fa-solid fa-circle-question"></i><a href="/home/help" class="fhover"> Help & Support</a></p>
+                        <p class="footermenu"><i class="fa fa-rss"></i><a href="/home/feedback" class="fhover"> Feedback</a></p>
+                    </div>
+                    <div class="col-sm-3 p-3 text-light">
+                        <p class="fs-5">About Website</p>
+                        <p class="webtext">
+                            "Our team is made up of passionate recruiters, career coaches, HR specialists, and business consultants who work tirelessly to ensure that both employers and employees thrive. We value transparency, integrity, and long-term relationships, and we are proud that so many of our clients and candidates choose to work with us again and again.
+                            "
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--U Footer end-->
+    <!--B Footer Start-->
+    <div class="container-fluid">
+        <div class="row bg-dark bfooter text-light text-center border-top border-light pt-3">
+           <div class="col-sm-6">Developed By : <b class="text-mycolor">Er. Mayank Vishwakarma</b> </div>
+           <div class="col-sm-6">
+               Copyright &copy; To : <b class="text-mycolor">Techpile Technology Private Limited</b>
+           </div>
+           
+        </div>
+    </div>
+    <!--B Footer End-->
+    
+</body>
+</html>

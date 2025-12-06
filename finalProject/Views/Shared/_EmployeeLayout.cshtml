@@ -1,0 +1,148 @@
+﻿<!DOCTYPE html>
+@if (Session["emp"]==null)
+            {
+                <script>
+                    alert('Login First');
+                    location.href='/home/emplogin'
+                </script>
+            }
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/CSS/all.css" rel="stylesheet" />
+    <link href="~/Content/CSS/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/Content/js/bootstrap.bundle.js"></script>
+    <style>
+        .ic {
+            font-size: 20px;
+            height: 30px;
+            width: 30px;
+            text-align: center;
+            line-height: 30px;
+            border: 1px solid #FF6D00;
+            color: #FF6D00;
+            transition: .5s;
+        }
+            .ic:hover {
+                transform: rotate(360deg);
+                transition: .5s;
+                background: #FF6D00;
+                color: white;
+            }
+        .bg-mycolor {
+            background: #FF6D00;
+        }
+
+        .text-mycolor {
+            color: #FF6D00 !important;
+        }
+
+        .dashdiv {
+            margin-top: 40px;
+            margin-bottom: 30px;
+        }
+
+        .dashic {
+            height: 55px;
+            width: 55px;
+            border-radius: 8px;
+            border: 1px solid black;
+            padding: 5px;
+            line-height: 45px;
+            font-size: 28px;
+        }
+
+        #dashcol a {
+            text-decoration: none;
+        }
+
+        .dashcard:hover {
+            transform: scale(1.1);
+            transition: 2s;
+        }
+
+        .dashcard {
+            transition: 2s;
+        }
+        
+    </style>
+</head>
+<body>
+    <!--Start header-->
+    <div class="row header shadow-lg mb-5" style="border-bottom: 5px solid #FF6D00; background: #ff6a000e;">
+        <div class="col-sm-10 mx-auto">
+            <div class="row py-3">
+                <div class="col-sm-3 fs-2">
+                    HIRE<b class="text-mycolor">NEXT <i class="fa-solid fa-graduation-cap"></i> </b>
+                </div>
+                <div class="col-sm-3">
+                    <b><i class="fa-solid fa-phone ic"></i> Call Us</b> : <br />7884441424 | 7077707077
+                </div>
+                <div class="col-sm-3">
+                    <b><i class="fa-solid fa-envelope ic"></i> Mail Us</b> : <br />ms0969910@gmail.com | mv0969910@gmail.com
+                </div>
+                <div class="col-sm-3 pt-1 text-end">
+                    <br /><b> @Session["emp"] </b> 
+
+   <i data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling" class="fa-solid fa-bars fs-3 ps-3"></i>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End header-->
+    @* Start menu *@
+ 
+   
+
+    <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasScrollingLabel">HIRE<b class="text-mycolor">NEXT</b></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="list-group border-0">
+                <li class="list-group-item border-0">
+                    <a style="text-decoration:none;color:black;" href="/Employee/Attendance"><i class="fa-solid fa-bars"></i>  Mark Attendance</a>
+                </li>
+                <li class="list-group-item border-0">
+                    <a style="text-decoration:none;color:black;" href="/Employee/leaveapplication"><i class="fa-solid fa-bars"></i>  Apply For Leave</a>
+                </li>
+                <li class="list-group-item border-0">
+                    <a style="text-decoration:none;color:black;" href="/Employee/LeaveapplicationStatus"><i class="fa-solid fa-bars"></i>  Leave Status</a>
+                </li>
+                <li class="list-group-item border-0">
+                    <a style="text-decoration:none;color:black;" href="/Employee/Myprofile"><i class="fa-solid fa-bars"></i>  My Profile</a>
+                </li>
+                <li class="list-group-item border-0">
+                    <a style="text-decoration:none;color:black;" href="/Employee/changepassword"><i class="fa-solid fa-bars"></i>  Change Password</a>
+                </li>
+                <li class="list-group-item border-0">
+                    <a style="text-decoration:none;color:black;" href="/employee/logout"><i class="fa-solid fa-bars"></i>  Log Out</a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+
+
+    @* End menu *@
+
+
+
+
+    <div style="min-height:700px;">
+        @RenderBody()
+    </div>
+
+    <div class="row bg-dark bfooter text-light text-center border-top border-light py-3">
+        <div class="col-sm-6">Developed By : <b class="text-mycolor">Er. Mayank Vishwakarma</b> </div>
+        <div class="col-sm-6">
+            Copyright &copy; To : <b class="text-mycolor">Techpile Technology Private Limited</b>
+        </div>
+
+    </div>
+
+</body>
+</html>

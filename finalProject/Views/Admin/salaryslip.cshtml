@@ -1,0 +1,85 @@
+﻿
+@{
+    ViewBag.Title = "salaryslip";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<div class="container-fluid">
+    <form method="get">
+        <div class="row">
+            <div class="col-sm-10 mt-5 shadow p-3 mb-5 bg-body rounded mx-auto">
+                <p class="fs-3 text-center">
+                    Employee Attendance<b class="text-mycolor"> Report  </b><br />
+                    <hr class="w-25 mx-auto" />
+                </p>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="form-floating">
+                            <select class="form-select" name="email" id="floatingSelect" aria-label="Floating label select example">
+                                <option selected>Select Employee</option>
+                                @foreach (System.Data.DataRow row in ViewBag.employee.Rows)
+                                {
+                                    <option value="@row["emailid"]">@row["name"] (@row["emailid"])</option>
+                                }
+                            </select>
+                            <label for="floatingSelect">Select Employee</label>
+
+
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <div class="form-floating mb-3">
+                            <input type="date" name="fromdate" class="form-control" id="floatingfrom" placeholder="name@example.com">
+                            <label for="floatingfrom">From Date</label>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <div class="form-floating mb-3">
+                            <input type="date" name="todate" class="form-control" id="floatingto" placeholder="name@example.com">
+                            <label for="floatingto">To Date</label>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-2">
+                        <input type="submit" class="btn btn-danger" value="View Report" />
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </form>
+    @if (ViewBag.attend != null)
+    {
+    <center>
+        <span class="text-center fs-5 text-danger">
+            Total :  @ViewBag.attend.Rows.Count Attendance found between 
+            @Request.QueryString["fromdate"] to @Request.QueryString["todate"]
+        </span>
+    </center><br/>
+    <table class="table table-striped table-bordered">
+        <thead>
+            <tr>
+                <th>SR</th>
+                <th>Email Id</th>
+                <th>Attendance Date</th>
+                <th>Attendance Time</th>
+                <th>Added On</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (System.Data.DataRow row in ViewBag.attend.Rows)
+            {
+                <tr>
+                    <td>1</td>
+                    <td>@row["empid"]</td>
+                    <td>@row["adate"]</td>
+                    <td>@row["atime"]</td>
+                    <td>@row["addedon"]</td>
+                </tr>
+
+            }
+        </tbody>
+    </table>
+    }
+</div>

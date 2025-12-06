@@ -1,0 +1,56 @@
+﻿@using System.Data
+@{
+    ViewBag.Title = "Opening";
+    Layout = "~/Views/Shared/_GeneralLayout.cshtml";
+}
+
+<div class="row py-2">
+    <div class="col-sm-10 mx-auto">
+        <div class="row">
+            <p class="fs-3 text-center">
+                Current<b class="text-mycolor"> Openings  </b><br />
+                <span class="fs-5">Apply Our Current Openings.</span>
+                <hr class="w-25 mx-auto" />
+            </p>
+            <hr class="mx-auto w-30" />
+        </div>
+        <!--Start job Opening section-->
+        <div class="row">
+            @foreach (System.Data.DataRow row in ViewBag.opening.Rows)
+            {
+                <div class="col-sm-6">
+                   
+                    <!--start opening Card  -->
+                    <div class="card text-center mb-2">
+                        <div class="card-header">
+                            <i class="fa-solid fa-calendar-days text-success"></i>Posted on :@row["start"] 
+                            <span class="badge text-bg-success">@row["status"]</span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">@row["title"]  (@row["id"])</h5>
+                            <p class="card-text">@row["details"]</p>
+                            <div class="row">
+                                <div class="col-sm-4">Job Type :- @row["type"]</div>
+                                <div class="col-sm-4"> City :- @row["city"]</div>
+                                <div class="col-sm-4"> Shift :- @row["shift"]</div>
+                                <div class="col-sm-4"> Total Opening :- @row["vacancy"]</div>
+                                <div class="col-sm-4"> Salary :- @row["minsalary"] to @row["maxsalary"]</div>
+                                <div class="col-sm-4"> Required Exp :- @row["exp"]</div>
+                            </div>
+                            <div class="row">
+                                Educational Qualification :- @row["education"]
+                            </div>
+                            <a href="/home/apply?jobid=@row["id"]&title=@row["title"]" class="btn btn-primary">Apply Now</a>
+                        </div>
+                        <div class="card-footer text-muted">
+                            <i class="fa-solid fa-calendar-days text-mycolor"></i>Expires on :29/12/2025
+                            <span class="badge text-bg-danger ">Expired</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- End opening Card -->
+            }
+            </div>
+        <!--End job Opening section-->
+    </div>
+</div>

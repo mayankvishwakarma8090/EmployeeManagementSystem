@@ -1,0 +1,49 @@
+﻿@using System.Data
+@{
+    ViewBag.Title = "emplist";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container-fluid">
+    <div class="row py-2">
+        <div class="col-sm-12">
+            <p class="fs-3 text-center">
+                All <b class="text-mycolor"> Employee List  </b><br />
+                <hr class="w-25 mx-auto" />
+            </p>
+            <hr class="mx-auto w-30">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-10 mx-auto mt-2">
+            <div class="row">
+                @foreach(System.Data.DataRow row in ViewBag.employee.Rows)
+                {
+                <div class="col-sm-3">
+                    <div class="card shadow p-3 mb-5 bg-white rounded">
+                        <img src="~/Content/profile/@row["picture"]" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">@row["name"]</h5>
+                            <p class="card-text"><i class="fa-solid fa-envelope"></i> @row["emailid"]
+                            <span class="text-secondary">
+                                <small>
+                                    <i class="fa-solid fa-phone"></i>@row["mobno"]
+                                    <i class="fa-solid fa-person"></i>@row["gender"]
+                                    <i class="fa-solid fa-money-bill"></i>@row["salary"]
+                                    <br />
+                                    <i class="fa-solid fa-location"></i>@row["address"]<br />
+                                    Experience:@row["exp"] <br />
+                                    Qualification : @row["qualification"]
+                                </small>
+                                </span>
+                            <a href="~/Content/Resume/@row["resume"]"><span class="badge bg-danger">Download Resume</span></a>
+                                  </p>
+                        </div>
+                    </div>
+                </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+

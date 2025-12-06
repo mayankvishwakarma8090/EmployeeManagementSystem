@@ -1,0 +1,64 @@
+﻿
+@{
+    ViewBag.Title = "Application";
+    Layout = "~/Views/Shared/_GeneralLayout.cshtml";
+}
+
+<div class="row py-2">
+    <div class="col-sm-12">
+        <p class="fs-3 text-center">
+            Your Job Application<b class="text-mycolor"> Status  </b><br />
+            <span class="fs-5">See Job Application Status</span>
+            <hr class="w-25 mx-auto" />
+        </p>
+        <hr class="mx-auto w-30" />
+    </div>
+    <form method="get">
+        <div class="row">
+            <div class="col-sm-10 mt-5 shadow p-3 mb-5 bg-body rounded mx-auto">              
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="form-floating mb-3">
+                            <input type="email" name="email" class="form-control" id="floatingto" placeholder="name@example.com">
+                            <label for="floatingto">Enter your emailid</label>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <input type="submit" class="btn btn-danger" value="View Report" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <div container-fluid>
+        @if (ViewBag.app != null)
+        {
+            <table class="table table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Job ID</th>
+                        <th>Apply on</th>
+                        <th>Is Hired</th>
+                        <th>Is Rejected</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (System.Data.DataRow row in ViewBag.app.Rows)
+                    {
+                        <tr>
+                            <td>@row["name"]</td>
+                            <td>@row["jid"]</td>
+                            <td>@row["regdate"]</td>
+                            <td>@row["ishired"]</td>
+                            <td>@row["isrejected"]</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+    </div>
+
+</div>
+

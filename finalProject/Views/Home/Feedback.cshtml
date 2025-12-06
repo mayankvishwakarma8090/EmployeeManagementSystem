@@ -1,0 +1,45 @@
+﻿
+@{
+    ViewBag.Title = "Feedback";
+    Layout = "~/Views/Shared/_GeneralLayout.cshtml";
+}
+<form method="post">
+    <div class="container-fluid">
+        <div class="row py-2">
+            <p class="fs-3 text-center">
+                Feedback <b class="text-mycolor">Form</b> <br />
+                <hr class="w-25 mx-auto" />
+            </p>
+            <!--Application Form Start-->
+            <div class="col-sm-6 shadow p-3 mb-5 bg-white rounded mx-auto">
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" name="fullname" id="floatingFullname" placeholder="" required>
+                    <label for="floatingFullname">Full Name</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="email" class="form-control" placeholder="" name="email" id="floatingEmail" required>
+                    <label for="floatingEmail">Email Id</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <select id="type" name="type" class="form-control pt-0" required>
+                        <option value="" selected disabled>Feedback Type</option>
+                        <option>Suggestion</option>
+                        <option>Complaint</option>
+                        <option>Issue</option>
+                        <option>Others</option>
+                    </select>
+                </div>
+                <div class="form-floating mb-3">
+                    <textarea class="form-control" name="message" id="floatingMessage" style="height: 200px;resize:none;" placeholder="" required></textarea>
+                    <label for="floatingMessage">Your Feedback</label>
+                </div>
+                <div style="text-align:center">
+                    <input type="submit" class="btn btn-success" value="Submit Feedback" />
+                    <input type="reset" class="btn btn-warning" value="Reset" />
+                </div>
+            </div>
+            <!--Application Form End-->
+        </div>
+    </div>
+</form>
+

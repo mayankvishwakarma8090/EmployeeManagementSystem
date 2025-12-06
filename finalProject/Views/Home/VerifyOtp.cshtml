@@ -1,0 +1,51 @@
+﻿
+@{
+    ViewBag.Title = "VerifyOtp";
+    Layout = "~/Views/Shared/_GeneralLayout.cshtml";
+}
+
+
+<div class="container-fluid">
+    <div class="row py-5 mx-auto">
+        <div class="col-sm-4 shadow p-3 mb-5 bg-white rounded mx-auto">
+            <h4 class="text-center mb-3">Enter <b class="text-mycolor">OTP</b></h4>
+
+            <div class="form-floating mb-3">
+                <input type="password" class="form-control" name="enteredOtp" form="verifyForm" placeholder="Enter OTP" required>
+                <label>Enter 6 digit OTP</label>
+            </div>
+
+            <div style="display:flex;justify-content:space-between; align-items:center;">
+                <!-- Verify OTP Form -->
+                <form method="post" action="/Home/VerifyOtp" id="verifyForm" style="display:inline;">
+                    <input type="submit" class="btn btn-success" value="Submit" />
+                </form>
+
+                <!-- Resend OTP Form -->
+                <form method="post" action="/Home/ResendOtp" style="display:inline;">
+                    <input type="hidden" id="remainingSeconds" value="@ViewBag.RemainingSeconds" />
+                    <button type="submit" id="resendBtn" class="btn btn-warning" disabled>
+                        Resend(<span id="countdown"></span>s)
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>var seconds = parseInt(document.getElementById("remainingSeconds").value) || 0;
+    var btn = document.getElementById("resendBtn");
+    var countdown = document.getElementById("countdown");
+    countdown.textContent = seconds;
+
+    var timer = setInterval(function () {
+        if (seconds > 0) {
+            seconds--;
+            countdown.textContent = seconds;
+        } else {
+            btn.disabled = false;
+            countdown.textContent = "";
+            clearInterval(timer);
+        }
+    }, 1000);</script>
+

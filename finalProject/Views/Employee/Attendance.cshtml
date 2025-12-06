@@ -1,0 +1,36 @@
+﻿
+
+@{
+    ViewBag.Title = "Attendance";
+    Layout = "~/Views/Shared/_EmployeeLayout.cshtml";
+}
+
+<div class="container-fluid">
+    <div class="row text-center mt-4">
+       
+        <div class="col-sm-12 text-center">
+            <h3>Dear Employee !<br />
+                               <span>Please Mark Your Attendance For Today</span></h3>
+            <hr />
+          <h4><span class="text-mycolor">Today is:- @DateTime.Now</span>(@DateTime.Now.DayOfWeek)</h4>
+
+            @if (ViewBag.data.Rows.Count > 0)
+            {
+                <h2 class="text-success">You are already logged in at : 
+            @ViewBag.data.Rows[0]["addedon"]</h2>
+            }
+            else
+            {
+          <form method="post">
+              <button type="submit" class="btn btn-lg btn-primary">Mark Your Attendance</button>
+          </form>
+            }
+
+
+            <hr />
+            <span><a>View Previous Attendance Reports</a></span>
+
+        </div>
+    </div>
+</div>
+

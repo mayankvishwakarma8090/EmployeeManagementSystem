@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "Emplogin";
+    Layout = "~/Views/Shared/_GeneralLayout.cshtml";
+}
+<form method="post">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-4 mx-auto p-3 shadow-lg rounded-4 login">
+                <h3 class="text-center mt-2">Login <b class="text-mycolor">Form <i class="fa-solid fa-key login-key"></i></b></h3>
+                <div class="input-group flex-nowrap mt-4">
+                    <span class="input-group-text" id="addon-wrapping"><i class="fa-solid fa-user"></i></span>
+                    <input type="text" class="form-control" name="userid" placeholder="Enter Your EmpId" value="@(Request.Cookies["empid"]!=null ? Request.Cookies["empid"].Value:"")" aria-label="Username" aria-describedby="addon-wrapping" required>
+                </div>
+                <div class="input-group flex-nowrap mt-4">
+                    <span class="input-group-text" id="addon-wrapping"><i class="fa-solid fa-lock"></i></span>
+                    <input type="password" class="form-control" name="password" placeholder="Enter Your Password" value="@(Request.Cookies["emppass"]!=null ? Request.Cookies["emppass"].Value:"")" aria-label="password" aria-describedby="addon-wrapping" required>
+                </div>
+                <div class="form-check mt-2 ms-2 w-auto float-start">
+                    <input type="checkbox" class="form-check-input" id="remember" name="remember" />
+                    <label class="form-check-label" for="remember">Remember Me</label>
+                </div>
+                <input type="submit" value="Login Now" class="form-control bg-mycolor mt-3" />
+                <a href="/home/ForgetPassword" style="text-decoration:none;">Forget Password</a>
+            </div>
+        </div>
+    </div>
+</form>
+
+
+

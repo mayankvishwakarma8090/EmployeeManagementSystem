@@ -1,0 +1,60 @@
+﻿
+@{
+    ViewBag.Title = "Myprofile";
+    Layout = "~/Views/Shared/_EmployeeLayout.cshtml";
+}
+<style>
+    .userimg {
+        height: 120px;
+        width: 120px;
+        border-radius: 50%;
+        border: 1px solid black;
+    }
+</style>
+
+@foreach (System.Data.DataRow row in ViewBag.user.Rows)
+{
+
+<div class="container-fluid">
+    <div class="row py-2">
+        <p class="fs-3 text-center">Welcome, <b class="text-mycolor">To Profile Page</b></p>
+        <div class="com-sm-8 mx-auto">
+            <div class="row py-3">
+                <div class="col-sm-5 mx-auto">
+                    <div class="card mx-auto shadow-lg border border-0 rounded-4 mt-5" style="min-height:400px;">
+                        <img src="~/Content/profile/@row["picture"]" class="img-fluid userimg position-absolute start-50 top-0 translate-middle" />
+                        <h3 class="text-center" style="margin-top:70px;">@row["name"]</h3>
+                        <p class="text-center m-0"><i class="fa-solid fa-envelope"></i> @row["emailid"]</p>
+                        <p class="text-center m-1"><i class="fa-solid fa-phone"></i> @row["mobno"]</p>
+                        <div class="row g-0 ps-3 pt-3">
+                            <div class="col-3">
+                                <b><i class="fa-solid fa-location"></i>Address :-</b>
+                            </div>
+                            <div class="col-9">@row["address"]</div>
+                        </div>
+                        <div class="row g-0 ps-3 pt-3">
+                            <div class="col-3">
+                                <b><i class="fa-solid fa-graduation-cap"></i>Qualification :-</b>
+                            </div>
+                            <div class="col-9">@row["qualification"]</div>
+                        </div>
+                        <div class="row g-0 ps-3 pt-3">
+                            <div class="col-3">
+                               <b><i class="fas fa-user-tie"></i>Experience:-</b>
+                            </div>
+                            <div class="col-9">@row["exp"]</div>
+                        </div>
+                        <div class="row g-0 ps-3 pt-3">
+                            <div class="col-3">
+                                <b><i class="fa-solid fa-people-arrows"></i>Gender :-</b>
+                            </div>
+                            <div class="col-9">@row["gender"]</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+}

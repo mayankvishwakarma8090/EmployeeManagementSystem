@@ -1,0 +1,61 @@
+﻿
+@{
+    ViewBag.Title = "LeaveapplicationStatus";
+    Layout = "~/Views/Shared/_EmployeeLayout.cshtml";
+}
+
+
+<div class="row py-2">
+    <div class="col-sm-10 mx-auto">
+        <p class="fs-3 text-center">All Your <b class="text-mycolor"> Leave Applications </b></p>
+        <hr class="mx-auto w-30" />
+    </div>
+    <div class="col-sm-12">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>SR</th>
+                    <th>Subject</th>
+                    <th>Details</th>
+                    <th>From Date</th>
+                    <th>To Date</th>
+                    <th>Total Days</th>
+                    <th>Applied On</th>
+                    <th>Status</th>
+                    <th>Attachment</th>
+                    </tr>
+                </thead>
+            <tbody>
+                @{ int i = 1; }
+
+                @foreach (System.Data.DataRow row in ViewBag.leave.Rows)
+                {
+                <tr>
+                    <td>@i</td>
+                    <td>@row["title"]</td>
+                    <td>@row["detail"]</td>
+                    <td>@row["fromdate"]</td>
+                    <td>@row["todate"]</td>
+                    <td>@row["totaldays"]</td>
+                    <td>@row["appliedon"]</td>
+                    @if (row["isaccepted"] == DBNull.Value)
+                    {
+                        <td><span class="badge bg-warning">Pending</span></td>
+                    }
+                    else if (Convert.ToBoolean(row["isaccepted"]))
+                    {
+                        <td><span class="badge bg-success">Accepted</span></td>
+                    }
+                    else
+                    {
+                        <td><span class="badge bg-danger">Rejected</span></td>
+                    }
+                    <td><a href="~/Content/leavefile/@row["attachfile"]"><i class="fa-solid fa-download" text-primary></i></a></td>
+                </tr>
+                    i = i + 1;
+                }
+            </tbody>
+            </table>
+        </div>
+    </div>
+

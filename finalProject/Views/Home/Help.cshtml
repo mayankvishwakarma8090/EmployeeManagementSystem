@@ -1,0 +1,89 @@
+﻿
+@{
+    ViewBag.Title = "Help";
+    Layout = "~/Views/Shared/_GeneralLayout.cshtml";
+}
+<body class="bg-light">
+
+    <div class="container mt-5 mb-5" style="max-width:900px">
+        <div class="card shadow-lg border-0 rounded-4">
+            <h3 class="text-center mt-2">Help & Support - <b class="text-mycolor">HireNext <i class="fa-solid fa-circle-question"></i></b></h3>
+            <div class="card-body p-4">
+
+                <!-- System Flow -->
+                <h5 class="text-primary mb-3">🔹 System Process Overview</h5>
+                <ol class="list-group list-group-numbered mb-4">
+                    <li class="list-group-item">Employee applies for a Job via <b>Job Application Form</b>.</li>
+                    <li class="list-group-item">Admin reviews the application and decides to <b>Hire</b> or <b>Reject</b>.</li>
+                    <li class="list-group-item">If <b>Hired</b>, Employee receives an Email with <b>Employee ID + Password</b>.</li>
+                    <li class="list-group-item">Employee can log in using the provided credentials on the <b>Login Page</b>.</li>
+                    <li class="list-group-item">Employee can check their <b>Hire/Reject Status</b> anytime from <b>My Application</b> menu by entering their Email ID.</li>
+                    <li class="list-group-item">If password is forgotten, Employee can use the <b>Forgot Password</b> link on Login Page.</li>
+                    <li class="list-group-item">Employees cannot change their profile details directly. Only Admin/HR can update it.</li>
+                </ol>
+                <!-- FAQ Section -->
+                <h5 class="text-primary mb-3">🔹 Frequently Asked Questions (FAQ)</h5>
+                <div class="accordion" id="faqAccordion">
+                    <div class="card mb-2">
+                        <div class="card-header"><b>Q1: How do I log in to the system?</b></div>
+                        <div class="card-body">
+                            Use your <b>Employee ID</b> and <b>Password</b> sent to you by email after being hired.
+                        </div>
+                    </div>
+                    <div class="card mb-2">
+                        <div class="card-header"><b>Q2: What if I forget my password?</b></div>
+                        <div class="card-body">
+                            Click on <b>Forgot Password</b> link available on the login page to reset your password.
+                        </div>
+                    </div>
+                    <div class="card mb-2">
+                        <div class="card-header"><b>Q3: Can I update my profile?</b></div>
+                        <div class="card-body">
+                            No, employees cannot update their profiles. Only Admin/HR can update your personal and job details.
+                        </div>
+                    </div>
+                    <div class="card mb-2">
+                        <div class="card-header"><b>Q4: How can I check my salary?</b></div>
+                        <div class="card-body">
+                            After login → Go to your Dashboard → Top-right menu (☰) → Click on <b>My Salary</b>.
+                        </div>
+                    </div>
+                    <div class="card mb-2">
+                        <div class="card-header"><b>Q5: Where can I check my job application status?</b></div>
+                        <div class="card-body">
+                            Go to <b>My Application</b> menu and enter your registered Email ID to view <b>Hire/Reject</b> status.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <h5 class="text-primary mt-4">🔹 Direct Access Links</h5>
+                <ul class="list-group mb-4">
+                    <li class="list-group-item"><a href="/home/apply" class="text-decoration-none">📝 Apply for a Job</a></li>
+                    <li class="list-group-item"><a href="/home/Application" class="text-decoration-none">📩 Check My Application Status</a></li>
+                    <li class="list-group-item"><a href="/home/empLogin" class="text-decoration-none">🔑 Employee Login</a></li>
+                    <li class="list-group-item"><a href="/home/ForgetPassword" class="text-decoration-none">❓ Forgot Password</a></li>
+                </ul>
+
+                <!-- Support -->
+                <h5 class="text-primary">🔹 Contact Support</h5>
+                <p>If you still need help, please contact our support team:</p>
+                <ul>
+                    <li><b>Email:</b> ms0969910@gmail.com</li>
+                    <li><b>Phone:</b> +91-8090040533</li>
+                    <li><b>Office Hours:</b> Mon–Fri, 9:00 AM – 6:00 PM</li>
+                </ul>
+
+                <div class="alert alert-info mt-3">
+                    💡 <b>Tip:</b> Always include your <b>Employee ID</b> when contacting support for faster assistance.
+                </div>
+
+            </div>
+
+            <div class="card-footer text-center bg-light">
+                <p class="mb-0">© 2025 HireNext | Help & Support</p>
+            </div>
+        </div>
+    </div>
+</body>
+

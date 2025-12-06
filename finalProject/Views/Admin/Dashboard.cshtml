@@ -1,0 +1,115 @@
+﻿
+@{
+    ViewBag.Title = "Dashboard";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container-fluid">
+    <dic class="row py-2">
+        <p class="fs-3 text-center">
+            Welcome To<b class="text-mycolor"> Dashboard  </b><br />
+            <hr class="w-25 mx-auto" />
+        </p>
+        <div class="col-sm-8 mx-auto">
+            <div class="row py-3">
+                <!-- Card start-->
+                <div class="col-sm-4 " id="dashcol">
+                    <a href="/Admin/Addopening">
+                        <div class="card mx-auto shadow-lg border border-0 rounded-2 dashcard">
+                            <div class="text-center dashdiv"><i class="fa-solid fa-plus dashic" style="background-color: #ffccbc;"></i></div>
+                            <h4 class="text-center mb-5">Add Opening</h4>
+                        </div>
+                    </a>
+                </div>
+                <!--Card end-->
+                <!-- Card start-->
+                <div class="col-sm-4 " id="dashcol">
+                    <a href="/Admin/OpeningList">
+                        <div class="card mx-auto shadow-lg border border-0  rounded-2 dashcard">
+                            <div class="text-center dashdiv"><i class="fa-solid fa-file dashic" style="background-color: #ff8a65;"></i></div>
+                            <h4 class="text-center  mb-5">Opening List</h4>
+                        </div>
+                    </a>
+                </div>
+                <!--Card end-->
+                <!-- Card start-->
+                <div class="col-sm-4 " id="dashcol">
+                    <a href="/Admin/Applicationdetails">
+                        <div class="card mx-auto shadow-lg border border-0  rounded-2 dashcard">
+                            <div class="text-center dashdiv"><i class="fa-solid fa-list-ol dashic" style="background-color: #ff5722;"></i></div>
+                            <h4 class="text-center  mb-5">Application Details</h4>
+                        </div>
+                    </a>
+                </div>
+                <!--Card end-->
+            </div>
+            <div class="row py-3">
+                <!-- Card start-->
+                <div class="col-sm-4 " id="dashcol">
+                    <a href="/Admin/emplist">
+                        <div class="card mx-auto shadow-lg border border-0  rounded-2 dashcard">
+                            <div class="text-center dashdiv"><i class="fa-solid fa-file-word dashic" style="background-color: #e8f5e9; "></i></div>
+                            <h4 class="text-center  mb-5">Employee List</h4>
+                        </div>
+                    </a>
+                </div>
+                <!--Card end-->
+                <!-- Card start-->
+                <div class="col-sm-4 " id="dashcol">
+                    <a href="/Admin/leaveapplication">
+                        <div class="card mx-auto shadow-lg border border-0  rounded-2 dashcard">
+                            <div class="text-center dashdiv"><i class="fa-solid fa-receipt dashic" style="background-color: #81d4fa;"></i></div>
+                            <h4 class="text-center  mb-5"> Leave Application</h4>
+                        </div>
+                    </a>
+                </div>
+                <!--Card end-->
+                <!-- Card start-->
+                <div class="col-sm-4 " id="dashcol">
+                    <a href="/Admin/salaryslip">
+                        <div class="card mx-auto shadow-lg border border-0  rounded-2 dashcard">
+                            <div class="text-center dashdiv"><i class="fa-solid fa-sign-out dashic" style="background-color: #b2dfdb;"></i></div>
+                            <h4 class="text-center mb-5">
+                                Employee Attendance Report
+                            </h4>
+                        </div>
+                    </a>
+                </div>
+                <!--Card end-->
+            </div>
+            <div class="row py-3">
+                <!-- Card start-->
+                <div class="col-sm-4 " id="dashcol">
+                    <a href="/Admin/enquirylist">
+                        <div class="card mx-auto shadow-lg border border-0 rounded-2 dashcard">
+                            <div class="text-center dashdiv"><i class="fa-solid fa-plus dashic" style="background-color: #ffccbc;"></i></div>
+                            <h4 class="text-center  mb-5">Enquiry List</h4>
+                        </div>
+                    </a>
+                </div>
+                <!--Card end-->
+                <!--Card Start-->
+                <div class="col-sm-4 mb-3" id="dashcol">
+                    <a href="/Admin/ChangePassword">
+                        <div class="card mx-auto shadow-lg border border-0 rounded-2 dashcard">
+                            <div class="text-center dashdiv"><i class="fa-solid fa-unlock-alt dashic" style="background-color: #ff8a65"></i></div>
+                            <h4 class="text-center mb-5">Change Password</h4>
+                        </div>
+                    </a>
+                </div>
+                <!--Card End-->
+                <!-- Card start-->
+                <div class="col-sm-4 " id="dashcol">
+                    <a href="/Admin/Logout">
+                        <div class="card mx-auto shadow-lg border border-0  rounded-2 dashcard">
+                            <div class="text-center dashdiv"><i class="fa-solid fa-sign-out dashic" style="background-color: #ff5722;"></i></div>
+                            <h4 class="text-center  mb-5">Log Out</h4>
+                        </div>
+                    </a>
+                </div>
+                <!--Card end-->
+            </div>
+        </div>
+    </dic>
+</div>
+

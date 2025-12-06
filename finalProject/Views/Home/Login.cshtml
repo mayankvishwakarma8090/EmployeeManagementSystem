@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_GeneralLayout.cshtml";
+}
+<form method="post">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-4 mx-auto p-3 shadow-lg rounded-4 login">
+                <h3 class="text-center mt-2"> Admin Login <b class="text-mycolor"> Form..<i class="fa-solid fa-key"></i></b></h3>
+                <div class="input-group flex-nowrap mt-4">
+                    <span class="input-group-text" id="addon-wrapping"><i class="fa-solid fa-user"></i></span>
+                    <input type="text" name="userid" class="form-control" placeholder="Enter Your User Id....." aria-label="Username" aria-describedby="addon-wrapping">
+                </div>
+                <div class="input-group flex-nowrap mt-4">
+                    <span class="input-group-text" id="addon-wrapping"><i class="fa-solid fa-lock"></i></span>
+                    <input type="password" name="password" class="form-control" placeholder="Enter Your Password....." aria-label="Username" aria-describedby="addon-wrapping">
+                </div>
+                <input type="submit" value="Login Now" class="bg-mycolor form-control mt-3 text-light" />
+                <a href="/home/ForgetPasswordForAdmin" style="text-decoration:none;">Forget Password</a>
+                <div class="mt-2 ms-2 pe-3 text-end">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+

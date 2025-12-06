@@ -1,0 +1,43 @@
+﻿
+@{
+    ViewBag.Title = "Leaveapplication";
+    Layout = "~/Views/Shared/_EmployeeLayout.cshtml";
+}
+<form method="post" enctype="multipart/form-data">
+    <div class="container-fluid">
+        <div class="row py-2">
+            <div class="col-sm-12">
+                <p class="fs-3 text-center">Apply for<b class="text-mycolor"> Leave</b></p>
+                <hr class="mx-auto w-30" />
+
+            </div>
+            <!--Application start-->
+
+            <div class="col-sm-6 mt-3 shadow p-3 mb-5 bg-white rounded mx-auto">
+                <h4 class="text-center">Leave Application Form</h4>
+                <div class="form-floating mb-3">
+                    <input type="text" name="subject" class="form-control" id="floatingSubject" placeholder="name@example.com">
+                    <label for="floatingSubjet">Leave Subject</label>
+                </div>
+                <div class="form-floating">
+                    <textarea class="form-control" name="details" placeholder="Leave a comment here" id="floatingDetails" style="height: 200px; resize:none;"></textarea>
+                    <label for="floatingDetails">LeaveDetails</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="date" name="fromdate" class="form-control" id="floatingfrom" placeholder="name@example.com">
+                    <label for="floatingfrom">From Date</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="date" name="todate" class="form-control" id="floatingto" placeholder="name@example.com">
+                    <label for="floatingto">To Date</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="file" name="file" class="form-control" id="floatingfile" placeholder="name@example.com">
+                    <label for="floatingfile">Attachment(If Any)</label>
+                </div>
+                <input type="submit" class="btn btn-danger" value="Send Application" />
+            </div>
+            <!--Application End-->
+        </div>
+    </div>
+</form>

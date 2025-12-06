@@ -1,0 +1,84 @@
+﻿
+@{
+    ViewBag.Title = "Dashboard";
+    Layout = "~/Views/Shared/_EmployeeLayout.cshtml";
+}
+
+
+<div class="container-fluid">
+    <dic class="row py-2">
+        @* start heading *@
+        <p class="fs-3 text-center">
+            Welcome to <b class="text-mycolor"> Employee Dashboard</b><br />
+            <hr class="w-25 mx-auto" />
+        </p>
+        @* End Heading *@
+
+        <div class="col-sm-8 mx-auto">
+            <div class="row py-3">
+                <!-- Card start-->
+                <div class="col-sm-4 " id="dashcol">
+                    <a href="/Employee/Attendance">
+                        <div class="card mx-auto shadow-lg border border-0 rounded-2 dashcard">
+                            <div class="text-center dashdiv"><i class="fa-solid fa-plus dashic" style="background-color: #ffccbc;"></i></div>
+                            <h4 class="text-center mb-5">Mark Attendance</h4>
+                        </div>
+                    </a>
+                </div>
+                <!--Card end-->
+                <!-- Card start-->
+                <div class="col-sm-4 " id="dashcol">
+                    <a href="/Employee/leaveapplication">
+                        <div class="card mx-auto shadow-lg border border-0  rounded-2 dashcard">
+                            <div class="text-center dashdiv"><i class="fa-solid fa-file dashic" style="background-color: #ff8a65;"></i></div>
+                            <h4 class="text-center  mb-5">Apply For Leave</h4>
+                        </div>
+                    </a>
+                </div>
+                <!--Card end-->
+                <!-- Card start-->
+                <div class="col-sm-4 " id="dashcol">
+                    <a href="/Employee/LeaveapplicationStatus">
+                        <div class="card mx-auto shadow-lg border border-0  rounded-2 dashcard">
+                            <div class="text-center dashdiv"><i class="fa-solid fa-list-ol dashic" style="background-color: #ff5722;"></i></div>
+                            <h4 class="text-center  mb-5"> Leave Status</h4>
+                        </div>
+                    </a>
+                </div>
+                <!--Card end-->
+            </div>
+            <div class="row py-3">
+                <!-- Card start-->
+                <div class="col-sm-4 " id="dashcol">
+                    <a href="/Employee/Myprofile">
+                        <div class="card mx-auto shadow-lg border border-0  rounded-2 dashcard">
+                            <div class="text-center dashdiv"><i class="fa-solid fa-file-word dashic" style="background-color: #e8f5e9; "></i></div>
+                            <h4 class="text-center  mb-5">My Profile</h4>
+                        </div>
+                    </a>
+                </div>
+                <!--Card end-->
+                <!-- Card start-->
+                <div class="col-sm-4 " id="dashcol">
+                    <a href="/Employee/changepassword">
+                        <div class="card mx-auto shadow-lg border border-0  rounded-2 dashcard">
+                            <div class="text-center dashdiv"><i class="fa-solid fa-receipt dashic" style="background-color: #81d4fa;"></i></div>
+                            <h4 class="text-center  mb-5"> Change Password</h4>
+                        </div>
+                    </a>
+                </div>
+                <!--Card end-->
+                <!-- Card start-->
+                <div class="col-sm-4 " id="dashcol">
+                    <a href="/Employee/Logout">
+                        <div class="card mx-auto shadow-lg border border-0 rounded-2 dashcard">
+                            <div class="text-center dashdiv"><i class="fa-solid fa-sign-out dashic" style="background-color: #b2dfdb;"></i></div>
+                            <h4 class="text-center mb-5">Logout</h4>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </dic>
+</div>
+

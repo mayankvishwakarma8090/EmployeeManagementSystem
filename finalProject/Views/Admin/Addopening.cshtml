@@ -1,0 +1,131 @@
+﻿
+@{
+    ViewBag.Title = "Addopening";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<form method="post">
+    <div class="container-fluid">
+        <div class="row py-2">
+            <p class="fs-3 text-center">
+                Add Job<b class="text-mycolor"> Opening  </b><br />
+                <hr class="w-25 mx-auto" />
+            </p>
+            <div class="col-sm-10 mx-auto">
+                <div class="row">
+                    <!--Form div start-->
+                    <div class="col-sm-6">
+                        <div class="form-floating mb-3">
+                            <input type="text" name="title" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+                            <label for="floatingInput">Job Title</label>
+                        </div>
+                    </div>
+                    <!--Form div End-->
+                    <!--Form div start-->
+                    <div class="col-sm-6">
+                        <div class="form-floating mb-3">
+                            <input type="text" name="detail" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+                            <label for="floatingInput"> Job Description</label>
+                        </div>
+                    </div>
+                    <!--Form div End-->
+                </div>
+                <div class="row">
+                    <!--Form div start-->
+                    <div class="col-sm-6">
+                        <div class="form-floating mb-3">
+                            <input type="text" name="type" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+                            <label for="floatingInput">Job Type</label>
+                        </div>
+                    </div>
+                    <!--Form div End-->
+                    <!--Form div start-->
+                    <div class="col-sm-6">
+                        <div class="form-floating mb-3">
+                            <input type="text" name="city" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+                            <label for="floatingInput">Job Location</label>
+                        </div>
+                    </div>
+                    <!--Form div End-->
+                </div>
+                <div class="row">
+                    <!--Form div start-->
+                    <div class="col-sm-6">
+                        <div class="form-floating mb-3">
+                            <input type="number" name="minsalary" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+                            <label for="floatingInput">Minimum Salary</label>
+                        </div>
+                    </div>
+                    <!--Form div End-->
+                    <!--Form div start-->
+                    <div class="col-sm-6">
+                        <div class="form-floating mb-3">
+                            <input type="number" name="maxsalary" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+                            <label for="floatingInput">Maximum Salary</label>
+                        </div>
+                    </div>
+                    <!--Form div End-->
+                </div>
+                <div class="row">
+                    <!--Form div start-->
+                    <div class="col-sm-6">
+                        <div class="form-floating mb-3">
+                            <input type="text" name="gender" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+                            <label for="floatingInput">Prefered Gender</label>
+                        </div>
+                    </div>
+                    <!--Form div End-->
+                    <!--Form div start-->
+                    <div class="col-sm-6">
+                        <div class="form-floating mb-3">
+                            <input type="text" name="shift" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+                            <label for="floatingInput">Shift</label>
+                        </div>
+                    </div>
+                    <!--Form div End-->
+                </div>
+                <div class="row">
+                    <!--Form div start-->
+                    <div class="col-sm-6">
+                        <div class="form-floating mb-3">
+                            <input type="text" name="exp" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+                            <label for="floatingInput">Experience</label>
+                        </div>
+                    </div>
+                    <!--Form div End-->
+                    <!--Form div start-->
+                    <div class="col-sm-6">
+                        <div class="form-floating mb-3">
+                            <input type="text" name="education" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+                            <label for="floatingInput">Education</label>
+                        </div>
+                    </div>
+                    <!--Form div End-->
+                </div>
+                <div class="row">
+                    <!--Form div start-->
+                    <div class="col-sm-6">
+                        <div class="form-floating mb-3">
+                            <input type="text" name="vacancy" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+                            <label for="floatingInput">Vacancies</label>
+                        </div>
+                    </div>
+                    <!--Form div End-->
+                    <!--Form div start-->
+                    <div class="col-sm-6">
+                        <div class="form-floating mb-3">
+                            <input type="date" name="lastdate" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+                            <label for="floatingInput">Last Date</label>
+                        </div>
+                    </div>
+                    <!--Form div End-->
+                </div>
+                <div class="row">
+                    <div class="col-sm-6 mx-auto">
+                        <input type="submit" value="Add Job" class="form-control bg-mycolor text-light" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+

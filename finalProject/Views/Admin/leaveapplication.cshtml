@@ -1,0 +1,80 @@
+﻿@{
+    ViewBag.Title = "leaveapplication";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<div class="container-fluid">
+    <div class="row py-2">
+        <div class="col-sm-10 mx-auto">
+            <p class="fs-3 text-center">
+                All Employees<b class="text-mycolor"> Leave Applications  </b><br />
+               
+                <hr class="w-25 mx-auto" />
+            </p>
+            <hr class="mx-auto w-30" />
+        </div>
+        <div class="col-sm-12">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>SR</th>
+                        <th>Employee Id</th>
+                        <th>Subject</th>
+                        <th>Details</th>
+                        <th>From Date</th>
+                        <th>To Date</th>
+                        <th>Total Days</th>
+                        <th>Applied On</th>
+                        <th>Status</th>
+                        <th>Attachment</th>
+                        <th>Change Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @{ int i = 1; }
+
+                    @foreach (System.Data.DataRow row in ViewBag.leave.Rows)
+                    {
+                        <tr>
+                            <td>@i</td>
+                            <td>@row["empid"]</td>
+                            <td>@row["title"]</td>
+                            <td>@row["detail"]</td>
+                            <td>@row["fromdate"]</td>
+                            <td>@row["todate"]</td>
+                            <td>@row["totaldays"]</td>
+                            <td>@row["appliedon"]</td>
+                            @if (row["isaccepted"] == DBNull.Value)
+                            {
+                                <td><span class="badge bg-warning">Pending</span></td>
+                            }
+                            else if (Convert.ToBoolean(row["isaccepted"]))
+                            {
+                                <td><span class="badge bg-success">Accepted</span></td>
+                            }
+                            else
+                            {
+                                <td><span class="badge bg-danger">Rejected</span></td>
+                            }
+                            <td><a href="~/Content/leavefile/@row["attachfile"]"><i class="fa-solid fa-download" text-primary></i></a></td>
+                            <td>
+                                @if (row["isaccepted"] == DBNull.Value)
+                                {
+                                    <a href="/admin/acceptleave?id=@row["id"]" onclick="return confirm('Do you really want to accept this leave application?')">
+                                        <span class="btn btn-success">Accept</span>
+                                    </a>
+                                    <a href="/admin/rejectleave?id=@row["id"]" onclick="return confirm('Do you really want to reject this leave application?')">
+                                        <span class="btn btn-danger">Reject</span>
+                                    </a>
+                                }
+                            </td>
+
+                        </tr>
+                        i = i + 1;
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
+
