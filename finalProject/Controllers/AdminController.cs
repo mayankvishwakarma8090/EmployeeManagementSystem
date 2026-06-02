@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
@@ -8,12 +9,11 @@ using System.Net.Mail;
 using System.Web;
 using System.Web.Helpers;
 using System.Web.Mvc;
-
 namespace finalProject.Controllers
 {
     public class AdminController : Controller
     {
-        SqlConnection con=new SqlConnection("Data Source=LAPTOP-DOH2OEOO\\SQLEXPRESS;Initial Catalog=finalproject;Integrated Security=True;");
+        SqlConnection con = new SqlConnection("Data Source=LAPTOP-DOH2OEOO\\SQLEXPRESS;Initial Catalog=finalproject;Integrated Security=True;");
         // GET: Admin
         public ActionResult Dashboard()
         {
@@ -164,7 +164,7 @@ namespace finalProject.Controllers
              </div>";
                             mail.IsBodyHtml = true;
                             SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587);
-                            smtp.Credentials = new NetworkCredential("ms0969910@gmail.com", "royu qrui mwro shkb");
+                            smtp.Credentials = new NetworkCredential("ms0969910@gmail.com", "jldl xfxz yyie lmuq");
                             smtp.EnableSsl = true;
                             smtp.Send(mail);
                         }
@@ -205,7 +205,7 @@ namespace finalProject.Controllers
                 mail.Body = $"Congratulations!! You are hired in our company. Here is your login Id and Password to access employee fracility.<br/><br/> Your Login Id is:{email}<br/>Your Password is: techpile<br/><br/>Fell Free to contact us on:7388078191 any time if you have any quiry.";
                 mail.IsBodyHtml = true;
                 SmtpClient smtp = new SmtpClient("smtp.gmail.com",587);
-                smtp.Credentials = new NetworkCredential("ms0969910@gmail.com", "royu qrui mwro shkb");
+                smtp.Credentials = new NetworkCredential("ms0969910@gmail.com", "jldl xfxz yyie lmuq");
                 smtp.EnableSsl = true;
                 smtp.Send(mail);
                 //save the login id and password of employee into tbl_emplogin

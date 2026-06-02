@@ -5,7 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-
+using System.Configuration;
 namespace finalProject.Controllers
 {
     public class EmployeeController : Controller

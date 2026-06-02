@@ -1,6 +1,7 @@
 ﻿using Microsoft.Ajax.Utilities;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
@@ -8,12 +9,12 @@ using System.Net;
 using System.Net.Mail;
 using System.Web;
 using System.Web.Mvc;
-
 namespace finalProject.Controllers
 {
     public class HomeController : Controller
     {
         SqlConnection con = new SqlConnection("Data Source=LAPTOP-DOH2OEOO\\SQLEXPRESS;Initial Catalog=finalproject;Integrated Security=True;");
+
         public ActionResult Index()
         {
             return View();
@@ -206,7 +207,7 @@ namespace finalProject.Controllers
                 try
                 {
                     SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587);
-                    smtp.Credentials = new NetworkCredential("ms0969910@gmail.com", "royu qrui mwro shkb");
+                    smtp.Credentials = new NetworkCredential("ms0969910@gmail.com", "jldl xfxz yyie lmuq");
                     smtp.EnableSsl = true;
                     smtp.Send(mail);
 
@@ -269,7 +270,7 @@ namespace finalProject.Controllers
             try
             {
                 SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587);
-                smtp.Credentials = new NetworkCredential("ms0969910@gmail.com", "royu qrui mwro shkb");
+                smtp.Credentials = new NetworkCredential("ms0969910@gmail.com", "jldl xfxz yyie lmuq");
                 smtp.EnableSsl = true;
                 smtp.Send(mail);
 
@@ -428,7 +429,7 @@ namespace finalProject.Controllers
                 try
                 {
                     SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587);
-                    smtp.Credentials = new NetworkCredential("ms0969910@gmail.com", "royu qrui mwro shkb");
+                    smtp.Credentials = new NetworkCredential("ms0969910@gmail.com", "jldl xfxz yyie lmuq");
                     smtp.EnableSsl = true;
                     smtp.Send(mail);
 
@@ -488,7 +489,7 @@ namespace finalProject.Controllers
             try
             {
                 SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587);
-                smtp.Credentials = new NetworkCredential("ms0969910@gmail.com", "royu qrui mwro shkb");
+                smtp.Credentials = new NetworkCredential("ms0969910@gmail.com", "jldl xfxz yyie lmuq");
                 smtp.EnableSsl = true;
                 smtp.Send(mail);
 
@@ -630,7 +631,7 @@ namespace finalProject.Controllers
               </div>";
                     mail.IsBodyHtml = true;
                     SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587);
-                    smtp.Credentials = new NetworkCredential("ms0969910@gmail.com", "royu qrui mwro shkb");
+                    smtp.Credentials = new NetworkCredential("ms0969910@gmail.com", "jldl xfxz yyie lmuq");
                     smtp.EnableSsl = true;
                     smtp.Send(mail);
                 }
@@ -689,7 +690,7 @@ namespace finalProject.Controllers
          </div>";
                 mail.IsBodyHtml = true;
                 SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587);
-                smtp.Credentials = new NetworkCredential("ms0969910@gmail.com", "royu qrui mwro shkb");
+                smtp.Credentials = new NetworkCredential("ms0969910@gmail.com", "jldl xfxz yyie lmuq");
                 smtp.EnableSsl = true;
                 smtp.Send(mail);
                 con.Open();
